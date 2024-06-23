@@ -47,6 +47,8 @@ function switchTheme(e) {
 
 // Save user preference on load
 
+const preferesDarkColorScheme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
 const currentTheme = localStorage.getItem("theme")
   ? localStorage.getItem("theme")
   : null;
@@ -57,6 +59,9 @@ if (currentTheme) {
   if (currentTheme === "dark") {
     toggleSwitch.checked = true;
   }
+} else if (preferesDarkColorScheme){
+  document.documentElement.setAttribute("data-theme", "dark");
+  toggleSwitch.checked = true;
 }
 
 //Adding date
