@@ -284,6 +284,7 @@ body {
 
   .nav-menu.active {
     right: 20px;
+    width: 100%;
   }
 
   .nav-menu .nav-link {
@@ -309,7 +310,7 @@ body {
   }
 
   .hamburger.active {
-    border: 1px dotted gray;
+    border: none;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -322,6 +323,10 @@ body {
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  #switch+.toggle-icons .moon{
+    margin-top: 4px;
   }
 }
 
